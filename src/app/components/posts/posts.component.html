@@ -1,0 +1,20 @@
+<div class="p-5">
+  <table class="table table-striped border">
+    <thead class="table table-dark">
+      <tr>
+        <th>No</th>
+        <th>Title</th>
+        <th>User_Id</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of postData">
+        <td>{{ data?.id }}</td>
+        <td>{{ data?.title }}</td>
+        <td>{{ data?.userId }}</td>
+        <td>{{ data?.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
