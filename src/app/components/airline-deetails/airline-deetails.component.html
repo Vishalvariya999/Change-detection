@@ -1,0 +1,36 @@
+<ngx-ui-loader></ngx-ui-loader>
+<div class="container-fluid">
+  <h2 class="h2 text-center mt-4 fw-bold">Airline Detals</h2>
+  <hr />
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="table table-dark">
+        <tr>
+          <th>Id</th>
+          <th>Country</th>
+          <th>Established</th>
+          <th>Name</th>
+          <th>Head Quater</th>
+          <th>Slogan</th>
+          <th>Logo</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of airlineData; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ data?.country }}</td>
+          <td>{{ data?.established }}</td>
+          <td>{{ data?.name }}</td>
+          <td>{{ data?.head_quaters }}</td>
+          <td>{{ data?.slogan }}</td>
+          <td>{{ data?.logo }}</td>
+          <td>{{ data?.website }}</td>
+        </tr>
+        <tr *ngIf="!airlineData?.length">
+          <td class="text-center text-dark" colspan="8">No recored found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
